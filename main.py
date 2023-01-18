@@ -43,13 +43,27 @@ headers = {
     "content-type": "application/json",
     "Authorization": "Bearer 9LpqTGIFLsKwtjtVHwIwGRLxIeP9tQDT"
 }
-print(payload['prompt'])
+# print(payload['prompt'])
 
-# response = requests.post(url, json=payload, headers=headers)
+response = requests.post(url, json=payload, headers=headers)
 
-# print(response.json()['completions'])
+print(response.json()['completions'][0]['data']['text'])
 
-# a = "Hello"
 
-# ab = f'bbb{a}'
-# print(ab)
+
+
+# transcript = ""
+# left, right = st.columns(2)
+
+# with left:
+#     st.header("Lecture Notes AI")
+#     transcript = st.text_area("Video Transcript", height=50)
+#     if st.button("Submit"):
+#         st.write(get_notes(transcript))    
+    
+    
+# with right:
+#     st.header("Lecture Chat AI")
+#     message("My message") 
+#     message("Hello bot!", is_user=True) 
+    
