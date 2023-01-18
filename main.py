@@ -6,8 +6,7 @@ instruction = "Imagine you are the best notetaker in the world. Write the most s
 url = "https://api.ai21.com/studio/v1/j1-grande/i-Note-it/complete"
 
 payload = {
-    "prompt": "Imagine you are the best notetaker in the world. Write the most streamlined and hierarchical bullet point notes with sections for this text:\nHello everyone. Welcome to Math 13, a place. You might notice I just locked in. I teach right before this. So if I am ever late, I, I don't think I will be, but if I ever am just wait a few minutes and probably just delayed by my previous class. So my name is Brandon Seward. I'd prefer you just told me Brandon. My pronouns, are they them? Or you can say he him if you prefer.\n##\n",
-    # "prompt": "{instruction}{input_text}",
+    "prompt": f"{instruction}{input_text}",
     "numResults": 1,
         "maxTokens": 2048,
         "temperature": 0,
@@ -44,7 +43,13 @@ headers = {
     "content-type": "application/json",
     "Authorization": "Bearer 9LpqTGIFLsKwtjtVHwIwGRLxIeP9tQDT"
 }
+print(payload['prompt'])
 
-response = requests.post(url, json=payload, headers=headers)
+# response = requests.post(url, json=payload, headers=headers)
 
-print(response.json()['completions'])
+# print(response.json()['completions'])
+
+# a = "Hello"
+
+# ab = f'bbb{a}'
+# print(ab)
