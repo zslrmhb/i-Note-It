@@ -1,4 +1,5 @@
 import streamlit as st
+from streamlit_chat import message
 import requests
 
 API_KEY = 'BVO7yd0kvpc2UMo95zY70Jt56E6NnBxY'        
@@ -6,9 +7,9 @@ API_KEY = 'BVO7yd0kvpc2UMo95zY70Jt56E6NnBxY'
 def get_notes(transcript):
     req = requests.post(
         "https://api.ai21.com/studio/v1/j1-large/complete",
-        headers={f"Authorization": "Bearer {API_KEY}}"},
+        headers={f"Authorization": "Bearer {API_KEY}"},
         json={
-            "prompt": transcript, 
+            "prompt": 'transcript', 
             "numResults": 1, 
             "maxTokens": 8, 
             "stopSequences": ["."],
@@ -33,5 +34,6 @@ with left:
     
 with right:
     st.header("Lecture Chat AI")
-    st.write("借鉴https://github.com/AI-Yash/st-chat")
+    message("My message") 
+    message("Hello bot!", is_user=True) 
     
