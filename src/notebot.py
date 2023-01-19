@@ -1,26 +1,29 @@
-from config import API_TOKEN, NOTETAKER_MODEL_URL
+from config import NOTEBOT_MODEL_URL, API_TOKEN
+
 import requests
 
-
-class NoteTaker:
-    """_summary_
-    """
-    def __init__(self, instruction=None):
+class NoteBot():
+    def __init__(self):
         """_summary_
-        """
-        if instruction == None:
-            self.instruction = "Imagine you are the best notetaker in the world. Write the most streamlined and hierarchical bullet point notes with sections for this text:\n"
-        else: 
-            self.instruction = instruction
-
-    def request_note(self, input_text, to_json=True):
-        """
 
         Args:
-            input_text (_type_): _description_
+            instruction (_type_, optional): _description_. Defaults to None.
+        """
+        self.instruction1 = "Context: "
+        self.instruction2 = "\nQuestion: "
+        self.instruction3 = "\nAnswer: "
+
+
+
+    def get_response(self, transcript, question, to_json=True):
+        """_summary_
+
+        Args:
+            transcript (_type_): _description_
+            question (_type_): _description_
         """
         payload = {
-                    "prompt": f"{self.instruction}{input_text}\n##\n",
+                    "prompt": f"{self.instruction1}{transcript}{self.instruction2}{question}{self.instruction3}",
                     "numResults": 1,
                     "maxTokens": 2048,
                     "temperature": 0,
@@ -33,7 +36,7 @@ class NoteTaker:
                                     "applyToStopwords": False,
                                     "applyToWhitespaces": False,
                                     "applyToEmojis": False
-                        },
+                                     },
                     "frequencyPenalty": {
                                         "scale": 0,
                                         "applyToNumbers": False,
@@ -41,7 +44,7 @@ class NoteTaker:
                                         "applyToStopwords": False,
                                         "applyToWhitespaces": False,
                                         "applyToEmojis": False
-                        },
+                    },
                     "presencePenalty": {
                                         "scale": 0,
                                         "applyToNumbers": False,
@@ -49,23 +52,22 @@ class NoteTaker:
                                         "applyToStopwords": False,
                                         "applyToWhitespaces": False,
                                         "applyToEmojis": False
-                      },
-                    "stopSequences":[]
-                    }
+                    },
+                    "stopSequences":["↵"]
+                }
         headers = {
                     "accept": "application/json",
                     "content-type": "application/json",
                     "Authorization": "Bearer {TOKEN}".format(TOKEN=API_TOKEN)
-                }
-
-        response = requests.post(NOTETAKER_MODEL_URL, json=payload, headers=headers)
+               }
+        response = requests.post(NOTEBOT_MODEL_URL, json=payload, headers=headers)
 
         if to_json:
             return response.json()
         else:
             return response
 
-    def run(self, input_text, to_json=True, get_text=True):
+    def run(self, transcript, question, to_json=True, get_text=True):
         """_summary_
 
         Args:
@@ -76,6 +78,8 @@ class NoteTaker:
             _type_: _description_
         """
         if get_text:
-            return self.request_note(input_text, to_json)['completions'][0]['data']['text']
+            return self.get_response(transcript, question, to_json)['completions'][0]['data']['text']
         else:
-            return self.request_note(input_text, to_json)
+            return self.get_response(transcript, question, to_json)
+
+        

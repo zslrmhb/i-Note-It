@@ -1,8 +1,10 @@
 from preprocess import PreProcessor
 from postprocess import PostProcessor
 from notetaker import NoteTaker
+from notebot import NoteBot
 
 import streamlit as st
+from streamlit_chat import message
 
 import re
 import time
@@ -18,7 +20,7 @@ st.caption("---Enhance Note-Taking Experience with Artificial Intelligence.")
 PreProcessService = PreProcessor()
 PostProcessService = PostProcessor()
 NoteTakingService = NoteTaker()
-
+NoteBotService = NoteBot()
 
 col1, col2 = st.columns(2, gap="medium")
 
@@ -47,3 +49,9 @@ with col2:
 
             download_button = st.download_button("Download", post_processed_note, 'i-Note-it.md')
             st.markdown(post_processed_note)
+
+with st.expander("Ask a Bot"):
+    question = st.text_input("Question")
+    if st.button("Ask"):
+        message(question, is_user=True)
+        message(NoteBotService.run(text,question))
