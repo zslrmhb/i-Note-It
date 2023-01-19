@@ -6,6 +6,9 @@ class PreProcessor:
         """
         pass
 
+    def check_input_length(self, text):
+        pass
+
     def process_text(self, text):
         """ Pre Process user input text
 
