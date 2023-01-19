@@ -1,1 +1,1 @@
-# I-Note-it
+# i-Note-it

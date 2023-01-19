@@ -20,7 +20,7 @@ class NoteTaker:
             input_text (_type_): _description_
         """
         payload = {
-                    "prompt": f"{self.instruction}{input_text}",
+                    "prompt": f"{self.instruction}{input_text}\n##\n",
                     "numResults": 1,
                     "maxTokens": 2048,
                     "temperature": 0,
@@ -79,5 +79,3 @@ class NoteTaker:
             return self.request_note(input_text, to_json)['completions'][0]['data']['text']
         else:
             return self.request_note(input_text, to_json)
-
-

@@ -1,5 +1,6 @@
 class PreProcessor:
-
+    """_summary_
+    """
     def __init__(self):
         """
         """
@@ -15,5 +16,5 @@ class PreProcessor:
             _type_: _description_
         """
         new_text = ""
-    
+
         return new_text
