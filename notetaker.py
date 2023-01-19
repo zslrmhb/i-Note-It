@@ -81,8 +81,3 @@ class NoteTaker:
             return self.request_note(input_text, to_json)
 
 
-
-# input_text = "Hello everyone. Welcome to Math 13, a place. You might notice I just locked in. I teach right before this. So if I am ever late, I, I don't think I will be, but if I ever am just wait a few minutes and probably just delayed by my previous class. So my name is Brandon Seward. I'd prefer you just told me Brandon. My pronouns, are they them? Or you can say he him if you prefer.\n##\n"
-
-# NoteTakingService = NoteTaker()
-# print(NoteTakingService.run(input_text))
