@@ -2,7 +2,7 @@ import streamlit as st
 from streamlit_chat import message
 import requests
 
-'''API_KEY = '1OS8cnPzWvuRAAI1YfLg71UaDevihHbe'''
+#API_KEY = '1OS8cnPzWvuRAAI1YfLg71UaDevihHbe
 
 
 def get_notes(transcript):
@@ -63,10 +63,8 @@ def get_message(transcript,question):
         "Authorization": "Bearer 1OS8cnPzWvuRAAI1YfLg71UaDevihHbe"
     }
     url = "https://api.ai21.com/studio/v1/j1-jumbo/complete"
-    transcript = "The 1881 world tour of King Kalākaua of the Hawaiian Kingdom was his attempt to save the Hawaiian culture and population from extinction by importing a labor force from Asia-Pacific nations. His efforts brought the small island nation to the attention of world leaders, but sparked rumors that the kingdom was for sale. Critics in Hawaii believed the labor negotiations were just an excuse to see the world. The 281-day trip gave Kalākaua the distinction of being the first monarch to circumnavigate the globe; his 1874 travels had made him the first reigning monarch to visit the United States and the first honoree of a state dinner at the White House."
     instruction1 = "Context: "
     instruction2 = "\nQuestion: "
-    question = "what happened in 1881?"
     instruction3 = "\nAnswer: "
     payload = {
         "prompt": f"{instruction1}{transcript}{instruction2}{question}{instruction3}",
@@ -102,7 +100,7 @@ def get_message(transcript,question):
         "stopSequences":["↵"]
     }
     response = requests.post(url,json=payload,headers=headers)
-    print(response.json()['completions'][0]['data']['text'])
+    return response.json()['completions'][0]['data']['text']
 
     
 
@@ -114,12 +112,16 @@ with left:
     transcript = st.text_area("Video Transcript", height=50)
     if st.button("Submit"):
         st.write(get_notes(transcript))
-            
+
     
     
 with right:
     st.header("Lecture Chat AI")
-    message("Hi!") 
-    message("Hello bot!", is_user=True) 
+    #message("Sup!") 
+    #message("Hello bot!", is_user=True)
+    question = st.text_input("question")
+    if st.button("Ask"):
+        message(question, is_user=True)
+        message(get_message(transcript,question))
     
     
