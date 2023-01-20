@@ -17,3 +17,14 @@ How did we make it?
   - Hyperparameter tuning: Note taking does not require too much randomness. Thus, we reduced the temperature, so the model will produce more rigorous notes. (TO be modified) 
 - UI design: For the two main features of our application, we let the major feature, the text  input and note area, to cover most upper area of the main page; we then put Chatbox below it as an auxiliary feature.  
 - Implementation: 
+  - Tools: 
+    - Streamlit for implementing note generation text interface. 
+    - Streamlit chatbot for Question-answering bot. 
+    - Custom-trained Jurassic-1 grande api for notes generation.
+    - Jurassic-1 Jumbo api for Chatbot
+  - User Interface:
+    - Layout: Two columns for input text and note generated, one expander below for Chatbot. 
+  - Prepocessing:
+  - Postprocessing:
+  - 
+    
