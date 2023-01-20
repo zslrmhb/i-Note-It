@@ -16,14 +16,18 @@
   - [Local Version](#local-streamlit-demo)
     - [Prerequisites](#prerequisites)
     - [Steps](#steps)
-      -[Environment Configuration](#environment-configuration)
+      - [Environment Configuration](#environment-configuration)
 - [Behind the Scene](#behind-the-scene)
   - [Language Model](#language-model)
     - [Note Generation](#note-generation)
       - [Original Approach](#original-approach)
       - [Final Approach](#final-approach)
+    - ["Hyperparameter Tuning"](#hyperparameter-tuning)
     - [Chatbot](#chatbot)
   - [UI and Logo Design](#ui-and-logo-design)
+    - [UI](#ui)
+    - [Logo](#logo)
+  - [Future Plans and Improvements](#future-plans-and-improvements)
 
 
 ## Latest Features 
@@ -91,10 +95,15 @@
 ### Language Model
 #### Note Generation
 
+
 ##### Original Approach
-- Prompt Engineering
+- Prompt Engineering (Jurassic-1 Grande Model)
   - Zero-Shot Prompt
+    - Simply asking the model to generate note without providing examples 
+    - Worse Performance, give illogical and inconsistent outputs
   - Few-Shots Prompt
+    - Asking the model to generate note by providing it with few examples
+    - better than the zero-shot prompt, but have a higher latency
 ##### Final Approach
 - AI21 Lab Customized Jurassic-1 Grande Model 
   - Trained a customized note generation model on the top of Jurassic-1 Grande
@@ -102,17 +111,41 @@
     - Feel Free to reach out, such as in the **Discussions** or **Issues** for a more detail explanation of the training process
   - Overall better performance and lower latency from the original approach
 
+#### "Hyperparameter" Tuning
+- Tuned the temperature and max-token of the model to optimize for best note generation result
+
 #### Chatbot
 - AI21 Lab Jurassic-1 Jumbo Model
+  - Use 3 instructions as prompt, see [notebot.py](scripts/notebot.py)
+  - Feed the input transcript as the *Context* for the Question *Inquiry*
 
 ### UI and Logo Design
 
+#### UI
+- Use Streamlit for the demo User Interface
+  - Have the main functionality(note generation) presented as 2 columns (input and output) 
+  - Put the chatbot in an expander for optional use, so it will not take up the majority of the space for the note display
+
+#### Logo
+- Took the first letter of each word of   "i-Note-lt"
+
+### Future Plans and Improvements
+- Domain-Specific Note Generation
+- Accept larger input size for note generation
+  - Slice the input into chunks to make note generation more efficient
+- Accept input other than text for note generation
+  - Audio
+  - Video 
+  - Web URL
+  - ...
+- User-Specific Note-Taking Model
+- Multiple Platform
+- And much more!!!
 
 
 
 
-How to use this application?
-- N/A.
+
   
 How did we make it?
 - Preparation: We were using Jurassic-1 provided by Ai21, so we explore the model first.
