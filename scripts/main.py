@@ -23,7 +23,7 @@ if "generated" not in st.session_state:
     st.session_state["notebot_response_history"] = []
     
 # Welcome page
-st.title("i-Note-it")
+st.title("i-Note-It")
 st.caption("---Enhance Note-Taking Experience with Artificial Intelligence.")
 
 # All the Services
