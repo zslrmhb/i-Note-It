@@ -25,7 +25,7 @@ class NoteBot():
         payload = {
                     "prompt": f"{self.instruction1}{transcript}{self.instruction2}{question}{self.instruction3}",
                     "numResults": 1,
-                    "maxTokens": 64,
+                    "maxTokens": 2048,
                     "temperature": 0,
                     "topKReturn": 0,
                     "topP":1,

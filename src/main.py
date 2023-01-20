@@ -18,6 +18,8 @@ if "generated" not in st.session_state:
     st.session_state["downloaded"] = True
     st.session_state["asked"] = False
     st.session_state["most_recent_note"] = ""
+    st.session_state["user_chat_history"] = []
+    st.session_state["notebot_response_history"] = []
     
 
 # Welcome page
@@ -67,7 +69,27 @@ with col2:
     st.markdown(st.session_state["most_recent_note"])
 
 with st.expander("Ask your NoteBot!"):
+
     question = st.text_input("Question")
-    if st.button("Ask"):
-        message(question, is_user=True)
-        message(NoteBotService.run(text,question))
+    clear_hist_button = st.button("Clear Chat History")
+    if clear_hist_button:
+        st.session_state["user_chat_history"].clear()
+        bot_hist = st.session_state["notebot_response_history"].clear()
+
+
+    if question: 
+        st.session_state["asked"] = True
+
+    if st.session_state["asked"]:
+
+        user_hist = st.session_state["user_chat_history"]
+        bot_hist = st.session_state["notebot_response_history"]
+        user_hist.append(question)
+        bot_hist.append(NoteBotService.run(text,question))
+
+
+        for i in range(len(user_hist)-1, -1, -1):
+            message(bot_hist[i], key=str(i) +'_bot')
+            message(user_hist[i], is_user=True, key=str(i) + '_user')
+
+        st.session_state["asked"] = False
