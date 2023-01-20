@@ -1,4 +1,4 @@
-# i-Note-it
+# i-Note-It
 ---------------------
 
 https://zslrmhb-i-note-it-streamlit--scriptsmain-yj2vod.streamlit.app/
