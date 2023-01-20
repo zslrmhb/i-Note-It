@@ -29,8 +29,8 @@ class NoteTaker:
         payload = {
                     "prompt": f"{self.instruction}{input_text}\n##\n",
                     "numResults": 1,
-                    "maxTokens": 64,
-                    "temperature": 0.7,
+                    "maxTokens": 2048,
+                    "temperature": 0.4,
                     "topKReturn": 0,
                     "topP":1,
                     "countPenalty": {

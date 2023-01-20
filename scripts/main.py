@@ -1,4 +1,4 @@
-from preprocess import PreProcessor
+# from preprocess import PreProcessor
 from postprocess import PostProcessor
 from notetaker import NoteTaker
 from notebot import NoteBot
@@ -27,7 +27,7 @@ st.title("i-Note-it")
 st.caption("---Enhance Note-Taking Experience with Artificial Intelligence.")
 
 # All the Services
-PreProcessService = PreProcessor()
+# PreProcessService = PreProcessor()
 PostProcessService = PostProcessor()
 NoteTakingService = NoteTaker()
 NoteBotService = NoteBot()
@@ -38,7 +38,8 @@ col1, col2 = st.columns(2, gap="medium")
 with col1:
     st.header("Your Text")
     generate_button = st.button("Generate")
-    text = st.text_area(":keyboard: Input the text ", height=300, max_chars=5000, help="Copy & Paste or type the text you want to convert into markdown note")  # Corresponds to approximately 2040 tokens (max. tokens for the model)
+    text = st.text_area(":keyboard: Input the text ", height=300, max_chars=5000, help="Copy & Paste or type the text you want to convert into markdown note")  
+    # Corresponds to approximately 2040 tokens (max. tokens for the model)
     
 with col2:
     st.header("Your Note")
@@ -87,7 +88,7 @@ with st.expander("Ask your NoteBot!"):
         user_hist.append(question)
         bot_hist.append(NoteBotService.run(text,question))
 
-        # Dialogue DIsplay
+        # Dialogue Display
         for i in range(len(user_hist)-1, -1, -1):
             message(bot_hist[i], key=str(i) +'_bot')
             message(user_hist[i], is_user=True, key=str(i) + '_user')
