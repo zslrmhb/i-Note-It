@@ -7,7 +7,7 @@
 I-Note-It is an application for AI note generation
 
 <!-- toc -->
-- [Features](#features)
+- [Features](#latest-features)
 - [How to use?](#how-to-use)
   - [Web Version](#web-streamlit-demo)
   - [Local Version](#local-streamlit-demo)
