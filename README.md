@@ -82,43 +82,28 @@ I-Note-It is an application for AI note generation
 
 ##### Original Approach
 - Prompt Engineering
-  - Zero-Shot Prompt
-  - Few-Shots Prompt
+  - Zero-Shot Prompt: Incomplete or ilogical notes.
+  - Few-Shots Prompt: Slow API response. 
 ##### Final Approach
 - AI21 Lab Customized Jurassic-1 Grande Model 
   - Trained a customized note generation model on the top of Jurassic-1 Grande
   - Training data comes from video transcripts from various platform such as Canvas, Youtube， TED Talks and Coursera covering various domains/subjects. In addition, English literature such as passage from William Shakespeare are included in the training data
     - Feel Free to reach out, such as in the **Discussions** or **Issues** for a more detail explanation of the training process
   - Overall better performance and lower latency from the original approach
+- Hyperparameter tuning(temperature): Note taking does not require too much randomness, but low tempeature makes the notes tedious. Thus, we kept the temperature at about 0.3 to let the model be creative. 
 
 #### Chatbot
 - AI21 Lab Jurassic-1 Jumbo Model
 
 ### UI Design
+#### Tools: 
+  - Streamlit for implementing note generation text interface. 
+  - Streamlit chatbot for Question-answering bot. 
+  - Figma for logo design.
+#### Layout: 
+- For the two main features of our application, we let the major feature, the text input and note area, to cover most upper area of the main page; we then put Chatbox below it as an auxiliary feature.
+#### Logo: 
+- The three parts of the logo match "i", "Note", and "It" respectively. This AI note generation project reminds us of how people took note in the ancient China with writing brush, when writing took so much efforts and preparations. Not only have "i" changed from human to A"I", but the writing brush we used for "N"ote have changed to copy paste and click. We are excited about how AI will bring more convenience to other aspects of human lives, just like how the way we take notes can be revolutionlized by AI. 
 
 
 
-
-
-How to use this application?
-- N/A.
-  
-How did we make it?
-- Preparation: We were using Jurassic-1 provided by Ai21, so we explore the model first.
-  - Prompt engineering: Note taking is summarization by nature, so we tried to suggest the model summarizing materials provided. 
-    - Zero shot and few shots learning: At the beginning, we gave the model direct prompt to generate notes from given text. However, some parts of the materials are not covered in the notes, and the notes were not logical. We gave the model several examples and tried the few shots learning afterward, and we encountered some other problems, including slow api call in request and response.  
-    - Customized model: To solve the problems we have with zero and few shots learning, we decided to train our customized model. we used ChatGPT to generate dataset with over 90 training data: texts and corresponding target notes in assigned formats. 
-  - Hyperparameter tuning: Note taking does not require too much randomness. Thus, we reduced the temperature, so the model will produce more rigorous notes. (TO be modified) 
-- UI design: For the two main features of our application, we let the major feature, the text  input and note area, to cover most upper area of the main page; we then put Chatbox below it as an auxiliary feature.  
-- Implementation: 
-  - Tools: 
-    - Streamlit for implementing note generation text interface. 
-    - Streamlit chatbot for Question-answering bot. 
-    - Custom-trained Jurassic-1 grande api for notes generation.
-    - Jurassic-1 Jumbo api for Chatbot
-  - User Interface:
-    - Layout: Two columns for input text and note generated, one expander below for Chatbot. 
-  - Prepocessing:
-  - Postprocessing:
-  - 
-    
