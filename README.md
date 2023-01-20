@@ -44,13 +44,36 @@ I-Note-It is an application for AI note generation
 - API Key from AI21 Studio: https://docs.ai21.com/
 
 #### Steps
-> NOTE: If you want to have a local version of the demo, you will need a custom-train Jurassic-1 Grande Model. For more information in obtaining your own model, feel Free to reach out in the **Discussions** or **Issues** sections for a more detail.
+> NOTE BEFORE PROCEEDING: If you want to have a local version of the demo, you will need a custom-train Jurassic-1 Grande Model. For more information in obtaining your own model, feel Free to reach out in the **Discussions** or **Issues** sections for a more detail.
 
 ##### Environment Configuration
 
-###### 
+###### Recommended (For Win64 Platform Only, Unfortunately)
+1. Clone this Github Repository
+2. Follow the instruction in the [requirements.txt](requirements.txt) to initialize the conda environment
 
--  Install the environment listed in the prerequisite (suggest using Anaconda to manage the environment) 
+###### Alternative
+1. Install the packages listed in the prerequisite (suggest using Anaconda to manage the environment) 
+
+##### config.py
+- As you may or may not notice, the program requires a config.py and we did not included it for the purpose of not sharing the API token. 
+- You going to set it up in your local environment, here is how:
+  1. Once you have done all the steps above(Configured te environment), go to your cloned repository.
+  2. Navigate into the **scripts** folder of the cloned repository.
+  3. create a **config.py** file with content in the following format
+  ```PYTHON
+  API_TOKEN = ""       
+  NOTETAKER_MODEL_URL = ""
+  NOTEBOT_MODEL_URL = ""
+  ```
+    - API_TOKEN: Your AI21 Studio API KEY
+    - NOTETAKER_MODEL_URL = The URL of your customized note generation model
+    - NOTEBOT_MODEL_URL = The URL of your chatbot model
+      - ex
+        ```PYTHON
+        NOTEBOT_MODEL_URL = "https://api.ai21.com/studio/v1/j1-jumbo/complete"
+        ```
+
 
 ## Behind the Scene
 
