@@ -1,4 +1,5 @@
-![525ec5135a4eee7d19be9a9a936fbbf](https://user-images.githubusercontent.com/96039456/213666527-039ee829-2e5d-418a-80a0-d7d2c23d9301.png)
+
+<img src="https://user-images.githubusercontent.com/96039456/213666527-039ee829-2e5d-418a-80a0-d7d2c23d9301.png" alt="drawing" width="200"/>
 ## i-Note-It
 ---------------------
 
