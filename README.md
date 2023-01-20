@@ -9,9 +9,9 @@ I-Note-It is an application for AI note generation
 <!-- toc -->
 - [Features](#features)
 - [How to use?](#how-to-use)
-  - [Prerequisites](#prerequisites)
   - [Web Version](#web-streamlit-demo)
   - [Local Version](#local-streamlit-demo)
+    - [Prerequisites](#prerequisites)
 - [Behind the Scene](#behind-the-scene)
 
 
@@ -24,18 +24,19 @@ I-Note-It is an application for AI note generation
 
 ## How to use?
 
-## Prerequisites
-- Python 3.7 - 3.10 
-  - The demo uses Python 3.9
-- Streamlit: https://github.com/streamlit/streamlit
-- st-chat: https://github.com/AI-Yash/st-chat
-- API Key from AI21 Studio: https://docs.ai21.com/
 
 
 ### Web Streamlit Demo
 [Web Demo](https://zslrmhb-i-note-it-streamlit--scriptsmain-yj2vod.streamlit.app/)
 
 ### Local Streamlit Demo
+
+#### Prerequisites
+- Python 3.7 - 3.10 
+  - The demo uses Python 3.9
+- Streamlit: https://github.com/streamlit/streamlit
+- st-chat: https://github.com/AI-Yash/st-chat
+- API Key from AI21 Studio: https://docs.ai21.com/
 
 
 ## Behind the Scene
