@@ -1,23 +1,24 @@
-class PreProcessor:
-    """_summary_
-    """
-    def __init__(self):
-        """
-        """
-        pass
+# TODO This part is currently not needed
+# class PreProcessor:
+#     """_summary_
+#     """
+#     def __init__(self):
+#         """
+#         """
+#         pass
 
-    def check_input_length(self, text):
-        pass
+#     def check_input_length(self, text):
+#         pass
 
-    def process_text(self, text):
-        """ Pre Process user input text
+#     def process_text(self, text):
+#         """ Pre Process user input text
 
-        Args:
-            text (_type_): _description_
+#         Args:
+#             text (_type_): _description_
 
-        Returns:
-            _type_: _description_
-        """
-        new_text = ""
+#         Returns:
+#             _type_: _description_
+#         """
+#         new_text = ""
 
-        return new_text
+#         return new_text

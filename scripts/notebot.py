@@ -3,24 +3,25 @@ from config import NOTEBOT_MODEL_URL, API_TOKEN
 import requests
 
 class NoteBot():
+    """ i-Note-it NoteBot
+    """
     def __init__(self):
-        """_summary_
-
-        Args:
-            instruction (_type_, optional): _description_. Defaults to None.
+        """init
         """
         self.instruction1 = "Context: "
         self.instruction2 = "\nQuestion: "
         self.instruction3 = "\nAnswer: "
 
-
-
     def get_response(self, transcript, question, to_json=True):
-        """_summary_
+        """ Get NoteBot Model Response
 
         Args:
-            transcript (_type_): _description_
-            question (_type_): _description_
+            transcript (str): input transcript
+            question (str): question to ask
+            to_json (bool, optional): convert to json format. Defaults to True.
+
+        Returns:
+            dict or str:  to_json=True -> dict, to_json=False -> str
         """
         payload = {
                     "prompt": f"{self.instruction1}{transcript}{self.instruction2}{question}{self.instruction3}",
@@ -68,18 +69,18 @@ class NoteBot():
             return response
 
     def run(self, transcript, question, to_json=True, get_text=True):
-        """_summary_
+        """ Run the Model
 
         Args:
-            input_text (_type_): _description_
-            to_json (bool, optional): _description_. Defaults to True.
+            transcript (str): input transcript
+            question (str): question to ask
+            to_json (bool, optional): convert to json format. Defaults to True.
+            get_text (bool, optional): Get the model completion response. Defaults to True.
 
         Returns:
-            _type_: _description_
+            str or dict: get_text=True -> str, get_text=False -> dict
         """
         if get_text:
             return self.get_response(transcript, question, to_json)['completions'][0]['data']['text']
         else:
-            return self.get_response(transcript, question, to_json)
-
-        
+            return self.get_response(transcript, question, to_json)  

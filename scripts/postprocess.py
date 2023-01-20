@@ -1,8 +1,8 @@
 class PostProcessor:
-    """_summary_
+    """Post process the text from the i-Note-it NoteTaker to a markdown-ready text
     """
     def __init__(self):
-        """_summary_
+        """init
         """
         pass
 

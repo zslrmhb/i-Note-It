@@ -1,12 +1,15 @@
 from config import API_TOKEN, NOTETAKER_MODEL_URL
+
 import requests
 
-
 class NoteTaker:
-    """_summary_
+    """i-Note-it NoteTaker 
     """
     def __init__(self, instruction=None):
-        """_summary_
+        """init
+
+        Args:
+            instruction (str, optional): Prompt for the Note Taking Model. Defaults to None.
         """
         if instruction == None:
             self.instruction = "Imagine you are the best notetaker in the world. Write the most streamlined and hierarchical bullet point notes with sections for this text:\n"
@@ -14,16 +17,20 @@ class NoteTaker:
             self.instruction = instruction
 
     def request_note(self, input_text, to_json=True):
-        """
+        """Get NoteTaker Model Response
 
         Args:
-            input_text (_type_): _description_
+            input_text (str): input transcript
+            to_json (bool, optional): convert to json format. Defaults to True.
+
+        Returns:
+            dict or str:  to_json=True -> dict, to_json=False -> str
         """
         payload = {
                     "prompt": f"{self.instruction}{input_text}\n##\n",
                     "numResults": 1,
-                    "maxTokens": 2048,
-                    "temperature": 0,
+                    "maxTokens": 64,
+                    "temperature": 0.7,
                     "topKReturn": 0,
                     "topP":1,
                     "countPenalty": {
@@ -66,14 +73,15 @@ class NoteTaker:
             return response
 
     def run(self, input_text, to_json=True, get_text=True):
-        """_summary_
+        """Run the Model
 
         Args:
-            input_text (_type_): _description_
-            to_json (bool, optional): _description_. Defaults to True.
+            input_text (str): Input transcript
+            to_json (bool, optional): convert to json format. Defaults to True.
+            get_text (bool, optional): Get the model completion response. Defaults to True.
 
         Returns:
-            _type_: _description_
+            str or dict: get_text=True -> str, get_text=False -> dict
         """
         if get_text:
             return self.request_note(input_text, to_json)['completions'][0]['data']['text']
