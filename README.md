@@ -17,6 +17,11 @@ I-Note-It is an application for AI note generation
 
 ## Latest Features 
 - Convert textual input, such as lecture transcripts and literature, into **streamlined** and **hierarchical** markdown formatted note.
+- The note generation performs best with English lecture transcripts that *start* and *end* with **complete** word.
+  - Other textual content, such as emoji, math formulas and programming language(especially **Python**) are supported.
+  - Language other than English is supported.
+    - Language Tested: English, Chinese
+
 - Able to **download** the markdown file of the formatted note.
 - A **chatbot** that can answer detailed inquiry related to the input.
   - This is really useful when the user want to have a deeper understanding of the material. 
@@ -51,8 +56,8 @@ I-Note-It is an application for AI note generation
 ##### Final Approach
 - AI21 Lab Customized Jurassic-1 Grande Model 
   - Trained a customized note generation model on the top of Jurassic-1 Grande
-  - Training data comes from video transcripts from various platfrom such as Canvas, Youtube， TED Talks and Coursera covering various domains/subjects. In addition, English literature such as passage from William Shakespeare is included in the training data
-    - Feel Free to reach out, such as in the **Discussions** or **Issues** for a more detail explaination of the training process
+  - Training data comes from video transcripts from various platform such as Canvas, Youtube， TED Talks and Coursera covering various domains/subjects. In addition, English literature such as passage from William Shakespeare is included in the training data
+    - Feel Free to reach out, such as in the **Discussions** or **Issues** for a more detail explanation of the training process
   - Overall better performance and lower latency from the original approach
 
 #### Chatbot
