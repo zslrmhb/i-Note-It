@@ -1,6 +1,7 @@
 # i-Note-it
 ---------------------
 I-Note-It is an application for note generation. 
+
 What features do we have?
 - Convert text materials, such as lecture transcripts and literatures, into notes formatted in sections. 
 - Answer detailed questions by Chatbot about materials, when users want to explore the note generated. 
