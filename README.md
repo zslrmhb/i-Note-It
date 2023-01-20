@@ -4,9 +4,6 @@
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
-https://zslrmhb-i-note-it-streamlit--scriptsmain-yj2vod.streamlit.app/
-
-
 I-Note-It is an application for AI note generation
 
 <!-- toc -->
@@ -18,7 +15,7 @@ I-Note-It is an application for AI note generation
 - [Behind the Scene](#behind-the-scene)
 
 
-## Features
+## Latest Features 
 - Convert textual input, such as lecture transcripts and literature, into **streamlined** and **hierarchical** markdown formatted note.
 - Able to **download** the markdown file of the formatted note.
 - A **chatbot** that can answer detailed inquiry related to the input.
@@ -35,13 +32,30 @@ I-Note-It is an application for AI note generation
 - API Key from AI21 Studio: https://docs.ai21.com/
 
 
-### Web StreamLit Demo
+### Web Streamlit Demo
+[Web Demo](https://zslrmhb-i-note-it-streamlit--scriptsmain-yj2vod.streamlit.app/)
 
-### Local StreamLit Demo
+### Local Streamlit Demo
+
 
 ## Behind the Scene
 
 ### Language Model
+#### Note Generation
+
+##### Original Approach
+- Prompt Engineering
+  - Zero-Shot Prompt
+  - Few-Shots Prompt
+##### Final Approach
+- AI21 Lab Customized Jurassic-1 Grande Model 
+  - Trained a customized note generation model on the top of Jurassic-1 Grande
+  - Training data comes from video transcripts from various platfrom such as Canvas, Youtube， TED Talks and Coursera covering various domains/subjects. In addition, English literature such as passage from William Shakespeare is included in the training data
+    - Feel Free to reach out, such as in the **Discussions** or **Issues** for a more detail explaination of the training process
+  - Overall better performance and lower latency from the original approach
+
+#### Chatbot
+- AI21 Lab Jurassic-1 Jumbo Model
 
 ### UI Design
 
