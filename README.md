@@ -4,7 +4,9 @@
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
-I-Note-It is an application for AI note generation
+# I-Note-It is an application for AI note generation
+
+[![Presentation](http://img.youtube.com/vi/ptGuxOxiN30/maxresdefault.jpg)](https://youtu.be/ptGuxOxiN30 "Video Title")
 
 <!-- toc -->
 - [Features](#latest-features)
@@ -12,7 +14,15 @@ I-Note-It is an application for AI note generation
   - [Web Version](#web-streamlit-demo)
   - [Local Version](#local-streamlit-demo)
     - [Prerequisites](#prerequisites)
+    - [Steps](#steps)
+      -[Environment Configuration](#environment-configuration)
 - [Behind the Scene](#behind-the-scene)
+  - [Language Model](#language-model)
+    - [Note Generation](#note-generation)
+      - [Original Approach](#original-approach)
+      - [Final Approach](#final-approach)
+    - [Chatbot](#chatbot)
+  - [UI and Logo Design](#ui-and-logo-design)
 
 
 ## Latest Features 
@@ -94,7 +104,7 @@ I-Note-It is an application for AI note generation
 #### Chatbot
 - AI21 Lab Jurassic-1 Jumbo Model
 
-### UI Design
+### UI and Logo Design
 
 
 
