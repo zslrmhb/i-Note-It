@@ -10,6 +10,8 @@ How to use this application?
   
 How did we make it?
 - Preparation: We were using Jurassic-1 provided by Ai21, so we explore the model first.
-  - Prompt engineering: Note taking is summarization by nature, so we tried to suggest the model summarizing materials provided. After we failed several trials, we realized that a single prompt might not be effective. Thus, we decided to stick to one prompt and apply few shots learning to train our own model. 
+  - Prompt engineering: Note taking is summarization by nature, so we tried to suggest the model summarizing materials provided. After we failed several trials, we realized that a single prompt might not be effective. Thus, we decided to stick to one prompt and apply few shots learning and train our own model. 
   - Few shots learning: In order to collect enough examples for few shots learning, we used ChatGPT to generate dataset: texts and corresponding target notes in assigned formats. 
-  - Hyperparameter tuning: 
+  - Hyperparameter tuning: Note taking does not require too much randomness. Thus, we reduced the temperature, so the model will produce more determined notes. (TO be modified) 
+- UI design: For the two main features of our application, we let the major feature, the text  input and note area, to cover most upper area of the main page; we then put Chatbox below it as an auxiliary feature.  
+- Implementation: 
