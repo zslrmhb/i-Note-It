@@ -7,11 +7,35 @@
 https://zslrmhb-i-note-it-streamlit--scriptsmain-yj2vod.streamlit.app/
 
 
-I-Note-It is an application for note generation. 
+I-Note-It is an application for AI note generation
 
-What features do we have?
-- Convert text materials, such as lecture transcripts and literatures, into notes formatted in sections. 
-- Answer detailed questions by Chatbot about the input materials; useful when users want to explore the note generated. 
+<!-- toc -->
+- [Features](#features)
+- [How to use?](#how-to-use)
+  - [Web Version](#web-streamlit-demo)
+  - [Local Version](#local-streamlit-demo)
+- [Behind the Scene](#behind-the-scene)
+
+
+## Features
+- Convert textual input, such as lecture transcripts and literature, into **streamlined** and **hierarchical** markdown formatted note.
+- Able to download the markdown file of the formatted note.
+- A chatbot that can answer detailed inquiry related to the input.
+  - This is really useful when the user want to have a deeper understanding of the material. 
+    - For example, the user can input the class lecture transcript and generate the note. The user is then able to ask question related to the class lecture that is inputted.
+
+## How to use?
+
+### Web StreamLit Demo
+
+### Local StreamLit Demo
+
+## Behind the Scene
+
+
+
+
+
 
 How to use this application?
 - N/A.
