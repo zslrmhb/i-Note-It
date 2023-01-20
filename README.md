@@ -20,7 +20,7 @@ I-Note-It is an application for AI note generation
 - The note generation performs best with English lecture transcripts that *start* and *end* with **complete** word.
   - Other textual content, such as emoji, math formulas and programming language(especially **Python**) are supported.
   - Language other than English is supported.
-    - Language Tested: English, Chinese
+    - Languages Tested: English, Chinese
 
 - Able to **download** the markdown file of the formatted note.
 - A **chatbot** that can answer detailed inquiry related to the input.
@@ -43,6 +43,14 @@ I-Note-It is an application for AI note generation
 - st-chat: https://github.com/AI-Yash/st-chat
 - API Key from AI21 Studio: https://docs.ai21.com/
 
+#### Steps
+> NOTE: If you want to have a local version of the demo, you will need a custom-train Jurassic-1 Grande Model. For more information in obtaining your own model, feel Free to reach out in the **Discussions** or **Issues** sections for a more detail.
+
+##### Environment Configuration
+
+###### 
+
+-  Install the environment listed in the prerequisite (suggest using Anaconda to manage the environment) 
 
 ## Behind the Scene
 
@@ -56,7 +64,7 @@ I-Note-It is an application for AI note generation
 ##### Final Approach
 - AI21 Lab Customized Jurassic-1 Grande Model 
   - Trained a customized note generation model on the top of Jurassic-1 Grande
-  - Training data comes from video transcripts from various platform such as Canvas, Youtube， TED Talks and Coursera covering various domains/subjects. In addition, English literature such as passage from William Shakespeare is included in the training data
+  - Training data comes from video transcripts from various platform such as Canvas, Youtube， TED Talks and Coursera covering various domains/subjects. In addition, English literature such as passage from William Shakespeare are included in the training data
     - Feel Free to reach out, such as in the **Discussions** or **Issues** for a more detail explanation of the training process
   - Overall better performance and lower latency from the original approach
 
