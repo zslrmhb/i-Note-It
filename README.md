@@ -133,7 +133,7 @@
 #### Layout: 
 - For the two main features of our application, we let the major feature, the text input and note area, to cover most upper area of the main page; we then put Chatbox below it as an auxiliary feature.
 #### Logo: 
-- The three parts of the logo match "i", "Note", and "It" respectively. This AI note generation project reminds us of how people took note in the ancient China with writing brush, when writing took so much efforts and preparations. Not only have "i" changed from human to A"I", but the writing brush we used for "N"ote have changed to copy paste and click. We are excited about how AI will bring more convenience to other aspects of human lives, just like how the way we take notes can be revolutionlized by AI. 
+- The three parts of the logo match "i", "Note", and "It" respectively. This AI note generation project reminds us of how people took note in the ancient China with writing brush, when writing took so much efforts and preparations. Not only have "i" changed from human to A"I", but the writing brush we used for "N"ote have changed to copy paste and click. We are excited about how AI will bring more convenience to other aspects of human lives, just like how the way we take notes can be revolutionlized by AI, just like the how this logo design was inspired by stable diffusion. 
 
 
 ### Future Plans and Improvements
