@@ -4,7 +4,10 @@
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
-I-Note-It is an application for AI note generation
+[![Presentation](http://img.youtube.com/vi/ptGuxOxiN30/maxresdefault.jpg)](https://youtu.be/ptGuxOxiN30 "Video Title")
+
+
+## i-Note-It: Enhanced Note-Taking Experience with Artificial Intelligence
 
 <!-- toc -->
 - [Features](#latest-features)
@@ -12,7 +15,19 @@ I-Note-It is an application for AI note generation
   - [Web Version](#web-streamlit-demo)
   - [Local Version](#local-streamlit-demo)
     - [Prerequisites](#prerequisites)
+    - [Steps](#steps)
+      - [Environment Configuration](#environment-configuration)
 - [Behind the Scene](#behind-the-scene)
+  - [Language Model](#language-model)
+    - [Note Generation](#note-generation)
+      - [Original Approach](#original-approach)
+      - [Final Approach](#final-approach)
+    - ["Hyperparameter Tuning"](#hyperparameter-tuning)
+    - [Chatbot](#chatbot)
+  - [UI and Logo Design](#ui-and-logo-design)
+    - [UI](#ui)
+    - [Logo](#logo)
+  - [Future Plans and Improvements](#future-plans-and-improvements)
 
 
 ## Latest Features 
@@ -80,10 +95,15 @@ I-Note-It is an application for AI note generation
 ### Language Model
 #### Note Generation
 
+
 ##### Original Approach
-- Prompt Engineering
-  - Zero-Shot Prompt: Incomplete or ilogical notes.
-  - Few-Shots Prompt: Slow API response. 
+- Prompt Engineering (Jurassic-1 Grande Model)
+  - Zero-Shot Prompt
+    - Simply asking the model to generate note without providing examples 
+    - Worse Performance, give illogical and inconsistent outputs
+  - Few-Shots Prompt
+    - Asking the model to generate note by providing it with few examples
+    - better than the zero-shot prompt, but have a higher latency
 ##### Final Approach
 - AI21 Lab Customized Jurassic-1 Grande Model 
   - Trained a customized note generation model on the top of Jurassic-1 Grande
@@ -92,8 +112,13 @@ I-Note-It is an application for AI note generation
   - Overall better performance and lower latency from the original approach
 - Hyperparameter tuning(temperature): Note taking does not require too much randomness, but low tempeature makes the notes tedious. Thus, we kept the temperature at about 0.3 to let the model be creative. 
 
+#### "Hyperparameter" Tuning
+- Tuned the temperature and max-token of the model to optimize for best note generation result
+
 #### Chatbot
 - AI21 Lab Jurassic-1 Jumbo Model
+  - Use 3 instructions as prompt, see [notebot.py](scripts/notebot.py)
+  - Feed the input transcript as the *Context* for the Question *Inquiry*
 
 ### UI Design
 #### Tools: 
@@ -105,5 +130,23 @@ I-Note-It is an application for AI note generation
 #### Logo: 
 - The three parts of the logo match "i", "Note", and "It" respectively. This AI note generation project reminds us of how people took note in the ancient China with writing brush, when writing took so much efforts and preparations. Not only have "i" changed from human to A"I", but the writing brush we used for "N"ote have changed to copy paste and click. We are excited about how AI will bring more convenience to other aspects of human lives, just like how the way we take notes can be revolutionlized by AI. 
 
+#### UI
+- Use Streamlit for the demo User Interface
+  - Have the main functionality(note generation) presented as 2 columns (input and output) 
+  - Put the chatbot in an expander for optional use, so it will not take up the majority of the space for the note display
 
+#### Logo
+- Took the first letter of each word of   "i-Note-lt"
 
+### Future Plans and Improvements
+- Domain-Specific Note Generation
+- Accept larger input size for note generation
+  - Slice the input into chunks to make note generation more efficient
+- Accept input other than text for note generation
+  - Audio
+  - Video 
+  - Web URL
+  - ...
+- User-Specific Note-Taking Model
+- Multiple Platform
+- And much more!!!
