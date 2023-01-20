@@ -1,5 +1,9 @@
 # i-Note-it
 ---------------------
+
+https://zslrmhb-i-note-it-streamlit--scriptsmain-yj2vod.streamlit.app/
+
+
 I-Note-It is an application for note generation. 
 
 What features do we have?
