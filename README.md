@@ -72,8 +72,8 @@
 
 ##### config.py
 - As you may or may not notice, the program requires a config.py and we did not included it for the purpose of not sharing the API token. 
-- You going to set it up in your local environment, here is how:
-  1. Once you have done all the steps above(Configured te environment), go to your cloned repository.
+- You are going to set it up in your local environment, here is how:
+  1. Once you have done all the steps above(Configured the environment), go to your cloned repository.
   2. Navigate into the **scripts** folder of the cloned repository.
   3. create a **config.py** file with content in the following format
   ```PYTHON
@@ -103,11 +103,11 @@
     - Worse Performance, give illogical and inconsistent outputs
   - Few-Shots Prompt
     - Asking the model to generate note by providing it with few examples
-    - better than the zero-shot prompt, but have a higher latency
+    - Better than the zero-shot prompt, but have a higher latency
 ##### Final Approach
 - AI21 Lab Customized Jurassic-1 Grande Model 
   - Trained a customized note generation model on the top of Jurassic-1 Grande
-  - Training data comes from video transcripts from various platform such as Canvas, Youtube， TED Talks and Coursera covering various domains/subjects. In addition, English literature such as passage from William Shakespeare are included in the training data
+  - Training data comes from video transcripts from various platform such as Canvas, Youtube，TED Talks and Coursera covering various domains/subjects. In addition, English literature such as passage from William Shakespeare are included in the training data
     - Feel Free to reach out, such as in the **Discussions** or **Issues** for a more detail explanation of the training process
   - Overall better performance and lower latency from the original approach
 
