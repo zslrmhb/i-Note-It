@@ -12,6 +12,7 @@ I-Note-It is an application for AI note generation
 <!-- toc -->
 - [Features](#features)
 - [How to use?](#how-to-use)
+  - [Prerequisites](#prerequisites)
   - [Web Version](#web-streamlit-demo)
   - [Local Version](#local-streamlit-demo)
 - [Behind the Scene](#behind-the-scene)
@@ -19,12 +20,20 @@ I-Note-It is an application for AI note generation
 
 ## Features
 - Convert textual input, such as lecture transcripts and literature, into **streamlined** and **hierarchical** markdown formatted note.
-- Able to download the markdown file of the formatted note.
-- A chatbot that can answer detailed inquiry related to the input.
+- Able to **download** the markdown file of the formatted note.
+- A **chatbot** that can answer detailed inquiry related to the input.
   - This is really useful when the user want to have a deeper understanding of the material. 
     - For example, the user can input the class lecture transcript and generate the note. The user is then able to ask question related to the class lecture that is inputted.
 
 ## How to use?
+
+## Prerequisites
+- Python 3.7 - 3.10 
+  - The demo uses Python 3.9
+- Streamlit: https://github.com/streamlit/streamlit
+- st-chat: https://github.com/AI-Yash/st-chat
+- API Key from AI21 Studio: https://docs.ai21.com/
+
 
 ### Web StreamLit Demo
 
@@ -32,6 +41,9 @@ I-Note-It is an application for AI note generation
 
 ## Behind the Scene
 
+### Language Model
+
+### UI Design
 
 
 
