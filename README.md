@@ -117,7 +117,7 @@
   - Overall better performance and lower latency from the original approach
 
 #### "Hyperparameter" Tuning
-- Note taking does not require too much randomness, but low tempeature makes the notes tedious. Thus, we kept the temperature at about 0.3 to let the model be creative. We also tuned max-token of the model to optimize for best note generation result
+- Note taking does not require too much randomness, but low temperature makes the notes tedious. Thus, we kept the temperature at about 0.3 to let the model be creative. We also tuned max-token of the model to optimize for best note generation result
 
 #### Chatbot
 - AI21 Lab Jurassic-1 Jumbo Model
@@ -130,9 +130,9 @@
   - Streamlit chatbot for Question-answering bot. 
   - Figma for logo design.
 #### Layout: 
-- For the two main features of our application, we let the major feature, the text input and note area, to cover most upper area of the main page; we then put Chatbox below it as an auxiliary feature.
+- For the two main features of our application, we let the major feature, the text input and note area, to cover most upper area of the main page; we then put Chatbot below it as an auxiliary feature.
 #### Logo: 
-- The three parts of the logo match "i", "Note", and "It" respectively. This AI note generation project reminds us of how people took note in the ancient China with writing brush, when writing took so much efforts and preparations. Not only have "i" changed from human to A"I", but the writing brush we used for "N"ote have changed to copy paste and click. We are excited about how AI will bring more convenience to other aspects of human lives, just like how the way we take notes can be revolutionlized by AI, just like the how this logo design was inspired by stable diffusion. 
+- The three parts of the logo match "i", "Note", and "It", respectively. This AI note generation idea reminds us of how people took note in the ancient China with writing brush, which required so much efforts and preparations. Now, not only have "i" changed from human to A"I", but the writing brush we used for "N"ote have changed to keyboard. We are excited about how AI will bring more convenience to other aspects of human lives, just like  the way we take notes can be revolutionized by AI, and just like the way this logo design was inspired by ideas from Stable Diffusion. 
 
 ### Future Plans and Improvements
 - Domain-Specific Note Generation
