@@ -7,7 +7,7 @@
 [![Presentation](http://img.youtube.com/vi/ptGuxOxiN30/maxresdefault.jpg)](https://youtu.be/ptGuxOxiN30 "Video Title")
 
 
-# i-Note-It: Enhanced Note-Taking Experience with Artificial Intelligence
+## i-Note-It: Enhanced Note-Taking Experience with Artificial Intelligence
 
 <!-- toc -->
 - [Features](#latest-features)
