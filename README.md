@@ -10,23 +10,28 @@
 ## i-Note-It: Enhanced Note-Taking Experience with Artificial Intelligence
 
 <!-- toc -->
-- [Features](#latest-features)
+- [i-Note-It: Enhanced Note-Taking Experience with Artificial Intelligence](#i-note-it-enhanced-note-taking-experience-with-artificial-intelligence)
+- [Latest Features](#latest-features)
 - [How to use?](#how-to-use)
-  - [Web Version](#web-streamlit-demo)
-  - [Local Version](#local-streamlit-demo)
+  - [Web Streamlit Demo](#web-streamlit-demo)
+  - [Local Streamlit Demo](#local-streamlit-demo)
     - [Prerequisites](#prerequisites)
     - [Steps](#steps)
       - [Environment Configuration](#environment-configuration)
+        - [Recommended (For Win64 Platform Only, Unfortunately)](#recommended-for-win64-platform-only-unfortunately)
+        - [Alternative](#alternative)
+      - [config.py](#configpy)
 - [Behind the Scene](#behind-the-scene)
   - [Language Model](#language-model)
     - [Note Generation](#note-generation)
       - [Original Approach](#original-approach)
       - [Final Approach](#final-approach)
-    - ["Hyperparameter Tuning"](#hyperparameter-tuning)
+    - ["Hyperparameter" Tuning](#hyperparameter-tuning)
     - [Chatbot](#chatbot)
-  - [UI and Logo Design](#ui-and-logo-design)
-    - [UI](#ui)
-    - [Logo](#logo)
+  - [UI Design](#ui-design)
+    - [Tools:](#tools)
+    - [Layout:](#layout)
+    - [Logo:](#logo)
   - [Future Plans and Improvements](#future-plans-and-improvements)
 
 
@@ -112,22 +117,22 @@
   - Overall better performance and lower latency from the original approach
 
 #### "Hyperparameter" Tuning
-- Tuned the temperature and max-token of the model to optimize for best note generation result
+- Note taking does not require too much randomness, but low tempeature makes the notes tedious. Thus, we kept the temperature at about 0.3 to let the model be creative. We also tuned max-token of the model to optimize for best note generation result
 
 #### Chatbot
 - AI21 Lab Jurassic-1 Jumbo Model
   - Use 3 instructions as prompt, see [notebot.py](scripts/notebot.py)
   - Feed the input transcript as the *Context* for the Question *Inquiry*
 
-### UI and Logo Design
-
-#### UI
-- Use Streamlit for the demo User Interface
-  - Have the main functionality(note generation) presented as 2 columns (input and output) 
-  - Put the chatbot in an expander for optional use, so it will not take up the majority of the space for the note display
-
-#### Logo
-- Took the first letter of each word of   "i-Note-lt"
+### UI Design
+#### Tools: 
+  - Streamlit for implementing note generation text interface. 
+  - Streamlit chatbot for Question-answering bot. 
+  - Figma for logo design.
+#### Layout: 
+- For the two main features of our application, we let the major feature, the text input and note area, to cover most upper area of the main page; we then put Chatbox below it as an auxiliary feature.
+#### Logo: 
+- The three parts of the logo match "i", "Note", and "It" respectively. This AI note generation project reminds us of how people took note in the ancient China with writing brush, when writing took so much efforts and preparations. Not only have "i" changed from human to A"I", but the writing brush we used for "N"ote have changed to copy paste and click. We are excited about how AI will bring more convenience to other aspects of human lives, just like how the way we take notes can be revolutionlized by AI, just like the how this logo design was inspired by stable diffusion. 
 
 ### Future Plans and Improvements
 - Domain-Specific Note Generation
