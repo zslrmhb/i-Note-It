@@ -10,7 +10,6 @@
 ## i-Note-It: Enhanced Note-Taking Experience with Artificial Intelligence
 
 <!-- toc -->
-- [i-Note-It: Enhanced Note-Taking Experience with Artificial Intelligence](#i-note-it-enhanced-note-taking-experience-with-artificial-intelligence)
 - [Latest Features](#latest-features)
 - [How to use?](#how-to-use)
   - [Web Streamlit Demo](#web-streamlit-demo)
@@ -32,7 +31,7 @@
     - [Tools:](#tools)
     - [Layout:](#layout)
     - [Logo:](#logo)
-  - [Future Plans and Improvements](#future-plans-and-improvements)
+- [Future Plans and Improvements](#future-plans-and-improvements)
 
 
 ## Latest Features 
@@ -125,13 +124,13 @@
   - Feed the input transcript as the *Context* for the Question *Inquiry*
 
 ### UI Design
-#### Tools: 
+#### Tools 
   - Streamlit for implementing note generation text interface. 
   - Streamlit chatbot for Question-answering bot. 
   - Figma for logo design.
-#### Layout: 
+#### Layout 
 - For the two main features of our application, we let the major feature, the text input and note area, to cover most upper area of the main page; we then put Chatbot below it as an auxiliary feature.
-#### Logo: 
+#### Logo
 - The three parts of the logo match "i", "Note", and "It", respectively. This AI note generation idea reminds us of how people took note in the ancient China with writing brush, which required so much efforts and preparations. Now, not only have "i" changed from human to A"I", but the writing brush we used for "N"ote have changed to keyboard. We are excited about how AI will bring more convenience to other aspects of human lives, just like  the way we take notes can be revolutionized by AI, and just like the way this logo design was inspired by ideas from Stable Diffusion. 
 
 ### Future Plans and Improvements
