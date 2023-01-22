@@ -9,7 +9,8 @@
 ## i-Note-It: Enhanced Note-Taking Experience with Artificial Intelligence
 ![GitHub](https://img.shields.io/github/license/zslrmhb/i-Note-It)
 ![GitHub Repo stars](https://img.shields.io/github/stars/zslrmhb/i-Note-It)
-
+![GitHub forks](https://img.shields.io/github/forks/zslrmhb/i-Note-It)
+![GitHub watchers](https://img.shields.io/github/watchers/zslrmhb/i-Note-It)
 
 <!-- toc -->
 - [Latest Features](#latest-features)
