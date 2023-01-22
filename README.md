@@ -13,8 +13,8 @@
 ![GitHub watchers](https://img.shields.io/github/watchers/zslrmhb/i-Note-It)
 
 <!-- toc -->
-- [Latest Features](#latest-features)
-- [How to use?](#how-to-use)
+- [Latest Features](#latest-features-star2)
+- [How to use?](#how-to-use-book)
   - [Web Streamlit Demo](#web-streamlit-demo)
   - [Local Streamlit Demo](#local-streamlit-demo)
     - [Prerequisites](#prerequisites)
@@ -30,7 +30,7 @@
       - [Final Approach](#final-approach)
     - ["Hyperparameter" Tuning](#hyperparameter-tuning)
     - [Chatbot](#chatbot)
-  - [UI Design](#ui-design)
+  - [UI Design](#ui-design-paintbrush)
     - [Tools](#tools)
     - [Layout](#layout)
     - [Logo](#logo)
@@ -159,6 +159,7 @@
 - And much more!!!
 
 ## Contributors
+- See [Contribute](CONTRIBUTING.md)
 
 
 ## Bug Reports and Feature Requests
