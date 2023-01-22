@@ -41,6 +41,10 @@
 
 
 ## Latest Features :star2:
+<p align="center">
+  <img  src="assets/demo.gif">
+</p>
+
 - Convert **textual input**, such as lecture transcripts and literature, into **streamlined** and **hierarchical** markdown formatted notes.
 - The note generation performs best with English lecture transcripts that *start* and *end* with a **complete** word.
   - Other textual content, such as emoji, math formulas, and programming language(especially **Python**) are supported.
@@ -145,18 +149,48 @@
 - The three parts of the logo match "i", "Note", and "It", respectively. This AI note-generation idea reminds us of how people took notes in ancient China with a writing brush, which required so much effort and preparation. Now, not only have "i" changed from human to A"I", but the writing brush we used for "N"ote has changed to keyboard. We are excited about how AI will bring more convenience to other aspects of human lives, just like the way we take notes can be revolutionized by AI, and just like the way this logo design was inspired by ideas from Stable Diffusion. 
 
 ## Future Plans and Improvements
-- Domain-Specific Note Generation
-- Accept larger input size for note generation
-  - Slice the input into chunks to make note generation more efficient
-- Accept input other than text for note generation
-  - Audio
-  - Video 
-  - Web URL
-  - ...
-- User-Specific Note-Taking Model
-- Multiple Platform
-- Better UI
-- And much more!!!
+<table>
+  <tbody>
+    <tr>
+      <th align="center"> Features/Plans </th>
+      <th align="center"> Specifics </th>
+    </tr>
+    <tr>
+      <td align="center"> Note Generation </td>
+      <td align="left">   
+        <ul> 
+          <li> domain-specific and user-specific </li>
+          <li> larger input size </li>
+          <li> variety of Input format </li>
+            <ul>  
+              <li> Audio </li>
+              <li> Video </li>
+              <li> Web URL </li>
+              <li> ... </li>
+            </ul>
+        </ul>   
+    </td>
+    </tr>
+    <tr>
+      <td align="center"> User Interface </td> 
+      <td align="left">   
+        <ul> 
+          <li> More professional and well-designed User Interface </li>
+        </ul>               
+      </td>
+    </tr>
+    <tr>
+      <td align="center"> Supporting Platforms </td>
+      <td align="left">   
+        <ul> 
+          <li> Multiple Platforms </li>
+        </ul>               
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+
 
 ## Contributors
 - See [Contribute](CONTRIBUTING.md)
