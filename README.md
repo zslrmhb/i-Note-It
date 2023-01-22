@@ -168,6 +168,7 @@
               <li> Web URL </li>
               <li> ... </li>
             </ul>
+          <li> Richer Markdown format, such as highlighting important information </li>
         </ul>   
     </td>
     </tr>
