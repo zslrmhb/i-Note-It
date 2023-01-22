@@ -68,7 +68,7 @@
 #### Prerequisites
 | Tool | Version/Link|
 | --- | --- |
-| Python | 3.7 - 3.10 (The demo sues Python 3.9) |
+| Python | 3.7 - 3.10 (The demo uses Python 3.9) |
 | Streamlit | https://github.com/streamlit/streamlit |
 | st-chat | https://github.com/AI-Yash/st-chat |
 | AI21 Studio API Key | https://docs.ai21.com/ |
