@@ -2,12 +2,14 @@
 <img src="assets/logo.png" width="300" height="350" />
 </p>
 
---------------------------------------------------------------------------------------------------------------------------------------------------
 
 [![Presentation](http://img.youtube.com/vi/ptGuxOxiN30/maxresdefault.jpg)](https://youtu.be/ptGuxOxiN30 "Video Title")
 
 
 ## i-Note-It: Enhanced Note-Taking Experience with Artificial Intelligence
+![GitHub](https://img.shields.io/github/license/zslrmhb/i-Note-It)
+![GitHub Repo stars](https://img.shields.io/github/stars/zslrmhb/i-Note-It)
+
 
 <!-- toc -->
 - [Latest Features](#latest-features)
