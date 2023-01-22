@@ -35,6 +35,9 @@
     - [Layout](#layout)
     - [Logo](#logo)
 - [Future Plans and Improvements](#future-plans-and-improvements)
+- [Contributors](#contributors)
+- [Bug Reports and Feature Requests](#bug-reports-and-feature-requests)
+- [License](#license)
 
 
 ## Latest Features :star2:
