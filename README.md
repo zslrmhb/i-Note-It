@@ -37,7 +37,7 @@
 - [Future Plans and Improvements](#future-plans-and-improvements)
 
 
-## Latest Features 
+## Latest Features :star2:
 - Convert textual input, such as lecture transcripts and literature, into **streamlined** and **hierarchical** markdown formatted note.
 - The note generation performs best with English lecture transcripts that *start* and *end* with **complete** word.
   - Other textual content, such as emoji, math formulas and programming language(especially **Python**) are supported.
