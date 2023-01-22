@@ -49,7 +49,7 @@
   - This is really useful when the user want to have a deeper understanding of the material. 
     - For example, the user can input the class lecture transcript and generate the note. The user is then able to ask question related to the class lecture that is inputted.
 
-## How to use?
+## How to use? :book:
 
 
 
@@ -99,7 +99,7 @@
         ```
 
 
-## Behind the Scene
+## Behind the Scene :sun_behind_small_cloud:
 
 ### Language Model
 #### Note Generation
@@ -128,7 +128,7 @@
   - Use 3 instructions as prompt, see [notebot.py](scripts/notebot.py)
   - Feed the input transcript as the *Context* for the Question *Inquiry*
 
-### UI Design
+### UI Design :paintbrush:
 #### Tools 
   - Streamlit for implementing note generation text interface. 
   - Streamlit chatbot for Question-answering bot. 
