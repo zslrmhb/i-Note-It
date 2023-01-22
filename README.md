@@ -61,7 +61,7 @@
 
 
 ### Web Streamlit Demo
-[Web Demo](https://zslrmhb-i-note-it-streamlit--scriptsmain-yj2vod.streamlit.app/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://zslrmhb-i-note-it-streamlit--scriptsmain-yj2vod.streamlit.app/)
 
 ### Local Streamlit Demo
 
