@@ -59,11 +59,13 @@
 ### Local Streamlit Demo
 
 #### Prerequisites
-- Python 3.7 - 3.10 
-  - The demo uses Python 3.9
-- Streamlit: https://github.com/streamlit/streamlit
-- st-chat: https://github.com/AI-Yash/st-chat
-- API Key from AI21 Studio: https://docs.ai21.com/
+| Tool | Version/Link|
+| --- | --- |
+| Python | 3.7 - 3.10 (The demo sues Python 3.9) |
+| Streamlit | https://github.com/streamlit/streamlit |
+| st-chat | https://github.com/AI-Yash/st-chat |
+| AI21 Studio API Key | https://docs.ai21.com/ |
+
 
 #### Steps
 > NOTE BEFORE PROCEEDING: If you want to have a local version of the demo, you will need a custom-train Jurassic-1 Grande Model. For more information in obtaining your own model, feel Free to reach out in the **Discussions** or **Issues** sections for a more detail.
